@@ -1,0 +1,287 @@
+Array di Oggetti in JavaScript
+Array:
+
+Gli array sono oggetti simili a liste che memorizzano più valori in una singola variabile. Questi valori possono essere di qualsiasi tipo, inclusi altri oggetti.
+Oggetti:
+
+Gli oggetti sono raccolte di coppie chiave-valore. Ogni chiave in un oggetto deve essere unica e il valore può essere di qualsiasi tipo di dati, inclusi stringhe, numeri, array o anche altri oggetti.
+
+let array = [];
+let object = {};
+let arrayObject = [{}, {}];
+
+----------------------------
+
+Introduzione all'API Audio Web
+L'API Audio Web è supportata da tutti i browser moderni e consente di generare e processare audio nelle applicazioni web. Offre un controllo dettagliato sui suoni, permettendo di creare effetti sonori complessi, manipolare l'audio e costruire sintetizzatori.
+
+***
+const audio = new Audio();
+new Audio(): Questo è il costruttore per creare un nuovo oggetto HTMLAudioElement. È simile a creare un elemento <audio> in HTML.
+
+Proprietà Comuni di Audio
+src: Specifica l'URL del file audio.
+currentTime: Ottiene o imposta la posizione corrente di riproduzione in secondi.
+duration: Restituisce la durata totale del file audio in secondi (solo lettura).
+paused: Restituisce un valore booleano che indica se l'audio è in pausa (solo lettura).
+volume: Ottiene o imposta il volume del suono (un valore tra 0.0 e 1.0).
+
+Metodi Comuni di Audio
+play(): Avvia la riproduzione dell'audio.
+pause(): Mette in pausa la riproduzione dell'audio.
+load(): Ricarica l'elemento audio.
+addEventListener(event, function): Assegna un ascoltatore di eventi per eventi specifici come play, pause, ended, ecc.
+***
+
+***
+Proprietà Principali di HTMLAudioElement
+src
+
+Descrizione: Specifica l'URL della risorsa audio.
+Esempio: audio.src = 'audio/file.mp3';
+currentTime
+
+Descrizione: Ottiene o imposta la posizione di riproduzione corrente in secondi.
+Esempio: audio.currentTime = 30; // Salta a 30 secondi
+duration
+
+Descrizione: Restituisce la durata totale della risorsa audio in secondi. Se la durata non è disponibile, restituisce NaN.
+Esempio: console.log(audio.duration);
+paused
+
+Descrizione: Restituisce un valore booleano che indica se l'audio è attualmente in pausa.
+Esempio: console.log(audio.paused);
+volume
+
+Descrizione: Ottiene o imposta il volume dell'audio. Il valore è compreso tra 0.0 (muto) e 1.0 (volume massimo).
+Esempio: audio.volume = 0.5; // Imposta il volume al 50%
+muted
+
+Descrizione: Ottiene o imposta se l'audio è muto.
+Esempio: audio.muted = true; // Muta l'audio
+loop
+
+Descrizione: Ottiene o imposta se l'audio deve essere riprodotto in loop.
+Esempio: audio.loop = true; // Riproduce l'audio in loop
+autoplay
+
+Descrizione: Ottiene o imposta se l'audio deve iniziare a essere riprodotto non appena è possibile.
+Esempio: audio.autoplay = true; // Avvia automaticamente la riproduzione
+preload
+
+Descrizione: Suggerisce al browser come caricare l'audio. Può essere none, metadata o auto.
+Esempio: audio.preload = 'auto'; // Precarica l'audio automaticamente
+ended
+
+Descrizione: Restituisce un valore booleano che indica se la riproduzione dell'audio è terminata.
+Esempio: console.log(audio.ended);
+playbackRate
+
+Descrizione: Ottiene o imposta la velocità di riproduzione dell'audio.
+Esempio: audio.playbackRate = 1.5; // Riproduce l'audio al 150% della velocità normale
+readyState
+
+Descrizione: Restituisce lo stato di prontezza dell'audio. Valori possibili includono:
+0 (HAVE_NOTHING): No information is available.
+1 (HAVE_METADATA): Metadata is available.
+2 (HAVE_CURRENT_DATA): Data for the current playback position is available.
+3 (HAVE_FUTURE_DATA): Data for the current and at least the next frame is available.
+4 (HAVE_ENOUGH_DATA): Enough data is available to start playback.
+Esempio: console.log(audio.readyState);
+networkState
+
+Descrizione: Restituisce lo stato della rete per l'audio. Valori possibili includono:
+0 (NETWORK_EMPTY): No data is loaded.
+1 (NETWORK_IDLE): Data is loaded but not actively loading.
+2 (NETWORK_LOADING): Data is currently loading.
+3 (NETWORK_NO_SOURCE): No source is available.
+Esempio: console.log(audio.networkState);
+Metodi Principali di HTMLAudioElement
+Oltre alle proprietà, HTMLAudioElement offre diversi metodi per controllare la riproduzione audio:
+
+play()
+
+Descrizione: Avvia la riproduzione dell'audio.
+Esempio: audio.play();
+pause()
+
+Descrizione: Mette in pausa la riproduzione dell'audio.
+Esempio: audio.pause();
+load()
+
+Descrizione: Ricarica la risorsa audio.
+Esempio: audio.load();
+canPlayType(type)
+
+Descrizione: Verifica se il browser può riprodurre il tipo di file audio specificato.
+Esempio: console.log(audio.canPlayType('audio/mp3'));
+
+***
+
+-------------------------------------
+
+let userData = {
+  songs: [...allSongs],
+};
+
+... è l'operatore che permette di copiare tutti gli elementi di un array. Ese:
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const combinedArr = [...arr1, ...arr2];
+console.log(combinedArr); // Output: [1, 2, 3, 4, 5, 6]
+
+------------------------
+
+Funzioni Regolari
+Definizione delle Funzioni Regolari:
+Le funzioni regolari possono essere definite utilizzando la parola chiave function.
+
+function funzioneRegolare(parametro1, parametro2) {
+  // Corpo della funzione
+  return parametro1 + parametro2;
+}
+
+Arrow Function
+Le arrow function sono una sintassi più concisa per scrivere funzioni, introdotte in ES6 (ECMAScript 2015).
+
+const arrowFunction = (parametro1, parametro2) => {
+  // Corpo della funzione
+  return parametro1 + parametro2;
+};
+
+Example Code
+const greet = (name) => {
+  console.log(`Hello, ${name}!`);
+};
+If the function only has one parameter, you can omit the parentheses around the parameter list like this:
+
+Example Code
+const greet = name => {
+  console.log(`Hello, ${name}!`);
+};
+
+***
+Uso dei Metodi di Funzione:
+
+Funzioni Regolari: Possono essere usate come costruttori e possono essere chiamate con new.
+Arrow Function: Non possono essere usate come costruttori e non possono essere chiamate con new.
+***
+
+***
+Rendimento Implicito
+
+Se la funzione freccia restituisce un'espressione semplice, puoi omettere la parola chiave return e le parentesi graffe {}. Questo è chiamato rendimento implicito.
+
+const multiplyTwoNumbers = (num1, num2) => num1 * num2;
+***
+
+-----------------------------
+Metodo .map()
+
+Il metodo map è uno strumento potente per trasformare gli array in JavaScript in modo pulito e conciso. Permette di applicare una funzione a ogni elemento di un array e ottenere un nuovo array con i risultati, senza modificare l'array originale.
+
+const numbers = [1, 2, 3];
+const doubledNumbers = numbers.map((number) => number * 2); // doubledNumbers will be [2, 4, 6]
+
+Caratteristiche Importanti
+- Immutabilità: map non modifica l'array originale. Crea invece un nuovo array con i risultati della funzione di callback.
+- Callback Necessario: La funzione map richiede una funzione di callback che esegue per ogni elemento dell'array.
+- Restituisce Nuovo Array: map restituisce sempre un nuovo array con lo stesso numero di elementi dell'array originale.
+
+
+----------------------------
+<button class="playlist-song-delete" aria-label="Delete Scratching The Surface">
+
+Importanza dell'Accessibilità
+L'uso di aria-label è importante per garantire che le applicazioni web siano accessibili a tutti gli utenti, inclusi quelli che utilizzano tecnologie assistive come gli screen reader. Fornendo etichette chiare e descrittive, miglioriamo l'esperienza utente e assicuriamo che tutti possano interagire con i contenuti web.
+
+
+-------------------------------------
+metodo .join()
+
+The join() method is used to concatenate all the elements of an array into a single string. It takes an optional parameter called a separator which is used to separate each element of the array. For example:
+
+Example Code
+const exampleArr = ["This", "is", "a", "sentence"];
+const sentence = exampleArr.join(" "); // Separator takes a space character
+console.log(sentence); // Output: "This is a sentence"
+
+To chain multiple methods together, you can call the join() method on the result of the map() method. For example:
+
+Example Code
+array.map().join();
+
+
+----------------------------------------------
+Optional Chaining (?.)
+L'optional chaining è una funzionalità introdotta in JavaScript (ES2020) che consente di accedere a proprietà annidate di oggetti senza dover verificare esplicitamente se ogni livello intermedio esiste. Questo può prevenire errori quando si tenta di accedere a proprietà che potrebbero essere null o undefined.
+
+
+-------------------
+metodo sort()
+
+The sort() method converts elements of an array into strings and sorts them in place based on their values in the UTF-16 encoding.
+
+Example Code
+const names = ["Tom", "Jessica", "Quincy", "Naomi"];
+names.sort() // ["Jessica", "Naomi", "Quincy", "Tom"]
+
+-------------------
+The find() method retrieves the first element within an array that fulfills the conditions specified in the provided callback function. If no element satisfies the condition, the method returns undefined.
+
+In the example below, the find() method is used to find the first number greater than 25:
+
+Example Code
+const numbers = [10, 20, 30, 40, 50];
+
+// Find the first number greater than 25
+const foundNumber = numbers.find((number) => number > 25);
+console.log(foundNumber); // Output: 30
+
+
+-----------------------------
+To get the index for the current song, you can use the indexOf() method. The indexOf() array method returns the first index at which a given element can be found in the array, or -1 if the element is not present.
+
+Example Code
+const animals = ["dog", "cat", "horse"];
+animals.indexOf("cat") // 1
+
+--------------------
+textContent è una proprietà che viene utilizzata per impostare o recuperare il contenuto testuale di un elemento HTML. Essa permette di manipolare il testo all'interno di un nodo specifico. Quando viene utilizzata per impostare il testo, tutti i nodi figli dell'elemento verranno sostituiti dal testo specificato. Quando viene utilizzata per recuperare il testo, restituirà il contenuto testuale concatenato di tutti i nodi figli.
+
+Example Code
+<div id="example">This is some text content</div>
+Example Code
+const element = document.getElementById('example');
+console.log(element.textContent); // Output: This is some text content
+
+-----------------------
+operatore ternario: alla variabile, assegno se currentTitle è vero, il valore di currentTitle, se falso, ""
+
+playingSong.textContent = currentTitle ? currentTitle : "";
+songArtist.textContent = currentArtist ? currentArtist : "";
+
+playButton.setAttribute("aria-label", song?.title ? `Play ${song.title}` : "Play");
+
+----------------------------
+const resetButton = document.createElement('button');
+è un metodo per creare un elemento nel DOM
+
+document.createTextNode("your text")
+const resetText = document.createTextNode("Reset Playlist");
+è un metodo per creare il testo ad un elemento del DOM
+
+
+-----------------------------
+appendChild() lets you add a node or an element as the child of another element. In the example below, the text "Click me" would be attached to the button:
+
+const parentElement = document.createElement("button")
+const parentElementText = document.createTextNode("Click me")
+
+// attach the text "Click me" to the button
+parentElement.appendChild(parentElementText)
+
+
+
+
